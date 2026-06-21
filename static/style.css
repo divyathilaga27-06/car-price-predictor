@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ece7e7;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+    background: rgb(130, 210, 121);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input,
+select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 95%;
+    padding: 12px;
+    background: blue;
+    color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+h2 {
+    color: rgb(174, 16, 213);
+}

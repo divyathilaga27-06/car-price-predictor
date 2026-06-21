@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Car Price Prediction</h1>
+
+    <form action="/predict" method="post">
+
+    <input type="number" name="car_id" placeholder="Car ID" required>
+
+    <select name="brand" required>
+        <option value="" disabled selected>Select Brand</option>
+        <option value="Tesla">Tesla</option>
+        <option value="Toyota">Toyota</option>
+        <option value="BMW">BMW</option>
+        <option value="Audi">Audi</option>
+        <option value="Honda">Honda</option>
+        <option value="Ford">Ford</option>
+    </select>
+
+    <input type="number" name="year" placeholder="Year" required>
+
+    <input type="number" step="0.1" name="engine_size" placeholder="Engine Size" required>
+
+    <select name="fuel_type" required>
+        <option value="" disabled selected>Select Fuel Type</option>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="Electric">Electric</option>
+        <option value="Hybrid">Hybrid</option>
+    </select>
+
+    <select name="transmission" required>
+        <option value="" disabled selected>Select Transmission</option>
+        <option value="Manual">Manual</option>
+        <option value="Automatic">Automatic</option>
+    </select>
+
+    <input type="number" name="mileage" placeholder="Mileage" required>
+
+    <select name="condition" required>
+        <option value="" disabled selected>Select Condition</option>
+        <option value="New">New</option>
+        <option value="Used">Used</option>
+        <option value="Like New">Like New</option>
+    </select>
+
+    <select name="model" required>
+        <option value="" disabled selected>Select Model</option>
+        <option value="Model X">Model X</option>
+        <option value="Model Y">Model Y</option>
+        <option value="Model 3">Model 3</option>
+        <option value="Mustang">Mustang</option>
+        <option value="Civic">Civic</option>
+        <option value="Corolla">Corolla</option>
+        <option value="Q5">Q5</option>
+        <option value="Q7">Q7</option>
+        <option value="A4">A4</option>
+        <option value="Explorer">Explorer</option>
+        <option value="Fiesta">Fiesta</option>
+        <option value="X3">X3</option>
+        <option value="5 Series">5 Series</option>
+    </select>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
